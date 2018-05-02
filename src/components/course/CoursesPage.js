@@ -4,8 +4,11 @@ class CoursesPage extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      course: { title: null }
+      course: { title: '' }
     };
+
+  this.onClickSave = this.onClickSave.bind(this);
+  this.onTitleChange = this.onTitleChange.bind(this);
   }
 
   onTitleChange(event) {
@@ -14,7 +17,7 @@ class CoursesPage extends Component {
     this.setState({ course: course });
   }
 
-  onClick() {
+  onClickSave() {
     alert(`Saving ${this.state.course.title}`);
   }
 
