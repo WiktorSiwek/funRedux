@@ -5,9 +5,11 @@ import '../../styles/styles.css';
 const Header = () => {
     return (
         <nav>
-            <IndexLink to="/" activateClassName="active">Home</IndexLink>
+            <IndexLink to="/" activeClassName="active">Home</IndexLink>
             {" | "}
-            <Link to="/about" activateClassName="activate">About</Link>
+            <Link to="/about" activeClassName="active">About</Link>
+            {" | "}
+            <Link to="/courses" activeClassName="active">Courses</Link>
         </nav>
     );
 };
