@@ -21,13 +21,19 @@ class CoursesPage extends Component {
 
   onClickSave() {
     alert(`Saving ${this.state.course.title}`);
-    this.props.dispatch(courseActions.createCourse(this.state.course))
+    this.props.dispatch(courseActions.createCourse(this.state.course));
+  }
+
+  courseRow(course, index) {
+    return <div key={index}>{course.title}</div>;
   }
 
   render() {
+    debugger;
     return (
       <div>
         <h1>Courses</h1>
+        {this.props.courses.map(this.courseRow)}
         <h2>Add Course</h2>
         <input type="text"
           onChange={this.onTitleChange}
@@ -41,10 +47,15 @@ class CoursesPage extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
+  debugger;
   return {
     courses: state.courses
   };
 }
 
+CoursesPage.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  courses: PropTypes.array.isRequired
+};
 
 export default connect(mapStateToProps /*mapDispatchToProps*/)(CoursesPage);
