@@ -13,7 +13,7 @@ class CoursesPage extends Component {
   }
 
   redirectToAddCoursePage() {
-    browserHistory.push('/form');
+    browserHistory.push('/course');
   }
 
   render() {
