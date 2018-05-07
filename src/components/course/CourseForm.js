@@ -22,12 +22,12 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
                 error={errors.authorId} />
             <TextInput
                 name="category"
-                label="category"
+                label="Category"
                 value={course.category}
                 onChange={onChange}
                 error={errors.category} />
             <TextInput
-                name="lenght"
+                name="length"
                 label="Length"
                 value={course.length}
                 onChange={onChange}
