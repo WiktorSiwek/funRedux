@@ -7,7 +7,7 @@ import configureMockStore from 'redux-mock-store';
 
 describe('Course Actions', () => {
     describe('createCourseSuccess', () => {
-        it('should create a CREATE_COURSE_SUCCESS action', () => {
+        it('Should create a CREATE_COURSE_SUCCESS action', () => {
             const course = { id: 'clean-code', title: 'Clean Code' };
             const expectedAction = {
                 type: types.CREATE_COURSE_SUCCESS,
