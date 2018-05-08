@@ -60,17 +60,17 @@ function setup(saving) {
     return shallow(<CourseForm {...props} />);
 }
 
-describe('', () => {
-    it('renders form and h1', () => {
+describe('Course Form', () => {
+    it('Should render form and h1', () => {
         const wrapper = setup(false);
         expect(wrapper.find('form').length).toBe(1);
         expect(wrapper.find('h1').text()).toEqual('Manage Course');
     });
-    it('save button is labeled "Save" when not saving', () => {
+    it('Save button should be labeled "Save" when not saving', () => {
         const wrapper = setup(false);
         expect(wrapper.find('input').props().value).toBe('Save');
     });
-    it('save button is labeled "Saving..." when saving', () => {
+    it('Save button should be labeled "Saving..." when saving', () => {
         const wrapper = setup(true);
         expect(wrapper.find('input').props().value).toBe('Saving...');
     });
